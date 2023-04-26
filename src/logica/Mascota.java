@@ -8,7 +8,7 @@ public class Mascota {
     private String origen;
     
     // Constructor
-    public Mascota(vacunas vacunas, double costo, String origen){
+    public Mascota(vacunas vacunas, Double costo, String origen){
         this.vacunas = vacunas;
         this.costo = costo;
         this.origen = origen;

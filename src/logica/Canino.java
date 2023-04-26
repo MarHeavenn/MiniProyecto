@@ -12,8 +12,6 @@ public abstract class Canino extends Mascota{
         this.aullan = aullan;
     }
 
-    
-
     public String getDientes() {
         return dientes;
     }

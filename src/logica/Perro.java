@@ -9,7 +9,7 @@ public class Perro extends Canino {
     
     public Perro(String nombre, String raza, 
     byte edad, String dientes, String aullan,
-     vacunas vacunas, int costos, String origen){
+     vacunas vacunas, Double costos, String origen){
         super(dientes, aullan, vacunas, costos, origen);
         this.nombre = nombre;
         this.raza = raza;
