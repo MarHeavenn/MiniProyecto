@@ -1,20 +1,40 @@
 package logica;
 
-public class Gato implements MejorAmigo, Dioses{
+public class Gato extends felino {
+    private String nombre;
+    private String raza;
+    private int edad;
 
-    @Override
-    public String saludar() {
-        return "miau";
+    public Gato(String nombre, String raza, int edad, 
+    String colmillos, String maullan, vacunas vacunas,
+     int costos, String origen) {
+        super(colmillos, maullan, vacunas, costos,origen);
+        this.nombre = nombre;
+        this.raza = raza;
+        this.edad = edad;
     }
 
-    @Override
-    public String apodo() {
-        return "michi";
+    public String getNombre() {
+        return nombre;
     }
 
-    @Override
-    public String tributo() {
-        return "murcielago";
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
 }
