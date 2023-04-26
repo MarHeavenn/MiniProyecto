@@ -1,32 +1,21 @@
 package logica;
 
-import java.util.ArrayList;
 
-public class Perro extends Canino implements MejorAmigo {
+public class Perro extends Canino {
     
     private String nombre;
-    private Raza raza;
+    private String raza;
     private byte edad;
-    ArrayList <Pulga> pulgas;
-    public static byte NUMERO_PERROS = 0;
     
-    public Perro(String nombre, 
-    Raza raza, byte edad,
-    String dientes,
-    String aullan, boolean tieneHijos){
-        super(dientes, aullan, tieneHijos);
+    public Perro(String nombre, String raza, 
+    byte edad, String dientes, String aullan,
+     String vacunas, int costos, String origen){
+        super(dientes, aullan, vacunas, costos, origen);
         this.nombre = nombre;
         this.raza = raza;
         this.edad = edad;
-        pulgas = new ArrayList<Pulga>();
-        NUMERO_PERROS++;
     }
 
-    
-    @Override
-    public void finalize(){
-        NUMERO_PERROS--;
-    }
 
     public String getNombre(){
         return nombre;
@@ -36,11 +25,11 @@ public class Perro extends Canino implements MejorAmigo {
         this.nombre = nombre;
     }
 
-    public Raza getRaza() {
+    public String getRaza() {
         return raza;
     }
 
-    public void setRaza(Raza raza) {
+    public void setRaza(String raza) {
         this.raza = raza;
     }
 
@@ -52,36 +41,4 @@ public class Perro extends Canino implements MejorAmigo {
         this.edad = edad;
     }
 
-    public void insertarPulga(Pulga pulga){
-        pulgas.add(pulga);
-    }   
-
-    public void imprimirPulgas(){
-        for(int i = 0; i < pulgas.size(); i++){
-            System.out.println(pulgas.get(i).getNombre());
-        }
-    }
-
-    public static void ladran(){
-        System.out.println("WOFF!!!");
-        
-    }
-
-    @Override
-    public String comoOrinan() {
-        return "Alza la pata";
-    }
-
-
-    @Override
-    public String saludar() {
-        return "Con la cola";
-    }
-
-
-    @Override
-    public String apodo() {
-        return "Firulais";
-    }
-    
 }
