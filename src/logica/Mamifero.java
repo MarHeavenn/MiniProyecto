@@ -3,7 +3,6 @@ package logica;
 public class Mamifero {
     
     private boolean tieneHijos = true;
-    public static final boolean TOMA_LECHE = true;
     public Mamifero(boolean tieneHijos) {
         this.tieneHijos = tieneHijos;
     }
