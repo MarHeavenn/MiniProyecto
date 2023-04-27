@@ -6,14 +6,11 @@ public abstract class Canino extends Mascota{
     private String aullan;
 
     public Canino(String dientes, String aullan, 
-    String vacunas, double costo, String origen){
+    vacunas vacunas, double costo, String origen){
         super(vacunas,costo,origen);
         this.dientes = dientes;
         this.aullan = aullan;
     }
-
-    
-
     public String getDientes() {
         return dientes;
     }

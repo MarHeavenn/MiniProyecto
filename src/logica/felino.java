@@ -5,7 +5,7 @@ public abstract class felino extends Mascota {
     private String colmillos;
 
     public felino (String colmillos, String maullan, 
-    String vacunas, double costo, String origen){
+    vacunas vacunas, double costo, String origen){
         super(vacunas,costo,origen);
         this.colmillos = colmillos;
         this.maullan = maullan;

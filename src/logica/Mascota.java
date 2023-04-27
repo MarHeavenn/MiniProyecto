@@ -1,24 +1,25 @@
 package logica; 
+import logica.vacunas;
 
 public class Mascota {
 
-    private String vacunas;
+    private vacunas vacunas;
     private double costo;
     private String origen;
     
     // Constructor
-    public Mascota(String vacunas, double costo, String origen){
+    public Mascota(vacunas vacunas, Double costo, String origen){
         this.vacunas = vacunas;
         this.costo = costo;
         this.origen = origen;
     }
     
     //metodos Get y set
-    public String getVacunas() {
+    public vacunas getVacunas() {
         return vacunas;
     }
 
-    public void setVacunas(String vacunas) {
+    public void setVacunas(vacunas vacunas) {
         this.vacunas = vacunas;
     }
 

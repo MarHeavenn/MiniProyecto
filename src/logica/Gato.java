@@ -6,8 +6,8 @@ public class Gato extends felino {
     private int edad;
 
     public Gato(String nombre, String raza, int edad, 
-    String colmillos, String maullan, String vacunas,
-     int costos, String origen) {
+    String colmillos, String maullan, vacunas vacunas,
+     double costos, String origen) {
         super(colmillos, maullan, vacunas, costos,origen);
         this.nombre = nombre;
         this.raza = raza;

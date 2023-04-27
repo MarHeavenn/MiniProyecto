@@ -5,10 +5,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 import logica.Mascota;
-import logica.Canino;
+import logica.vacunas;
 import logica.Perro;
 import logica.Gato;
-import logica.felino;
+
 
 public class App {
 
@@ -36,45 +36,137 @@ public class App {
                         switch(control){
                             case 1:
                                 //insertar perro
-                                Scanner scanner = new Scanner(System.in);                            
                                 Scanner leer = new Scanner(System.in);
                                 System.out.print("Ingrese el número de perros que desea agregar: ");
                                 int numPerros = leer.nextInt();
                                 for (int i = 0; i < numPerros; i++) {
                                     System.out.println("Ingresando datos para el perro " + (i+1) + "...");
                                     System.out.println("Ingrese el nombre del perro: ");
-                                    String nombre = scanner.nextLine();
+                                    String nombre = leer.nextLine();
                                 
                                     System.out.println("Ingrese la raza del perro: ");
-                                    String raza = scanner.nextLine();
+                                    String raza = leer.nextLine();
                                 
                                     System.out.println("Ingrese la edad del perro: ");
-                                    byte edad = scanner.nextByte();
+                                    byte edad = leer.nextByte();
                                 
                                     System.out.println("Ingrese la longitud del pelaje del perro: ");
-                                    String dientes = scanner.next();
+                                    String dientes = leer.next();
                                 
                                     System.out.println("Ingrese la textura del pelaje del perro: ");
-                                    String aullan = scanner.nextLine();
+                                    String aullan = leer.nextLine();
                                 
-                                    System.out.println("ingrese las vacunas: ");
-                                    String vacunas = scanner.nextLine();
+                                    vacunas vacuna = null;
+                                    boolean vacunaValida = false;
+                                    do {
+                                        System.out.println("Seleccione la vacuna del gato:");
+                                        System.out.println("1 - Malota");
+                                        System.out.println("2 - Parbovirosis");
+                                        System.out.println("3 - Pentavalente");
+                                        System.out.println("4 - Rabia");
+                                        Scanner scanner = new Scanner(System.in);
+                                        int opcion = scanner.nextInt();
+
+                                        switch (opcion) {
+                                            case 1:
+                                                vacuna = vacunas.MALOTA;
+                                                vacunaValida = true;
+                                                break;
+                                            case 2:
+                                                vacuna = vacunas.PARBOVIROSIS;
+                                                vacunaValida = true;
+                                                break;
+                                            case 3:
+                                                vacuna = vacunas.PENTAVALENTE;
+                                                vacunaValida = true;
+                                                break;
+                                            case 4:
+                                                vacuna = vacunas.RABIA;
+                                                vacunaValida = true;
+                                                break;
+                                            default:
+                                                System.out.println("Opción inválida. Intente nuevamente.");
+                                                break;
+                                        }
+                                    } while (!vacunaValida);
 
                                     System.out.println("ingrese el costo de la mascota: ");
-                                    int costos = scanner.nextInt();
+                                    double costos = leer.nextDouble();
 
                                     System.out.println("ingrese el pais de origen: ");
-                                    String origen = scanner.nextLine();
+                                    String origen = leer.nextLine();
                                 
-                                    // Creamos el objeto de tipo Perro con los datos ingresados por el usuario
-                                    Perro perro = new Perro(nombre, raza, edad, dientes, aullan, vacunas, costos, origen);
+                                    // Creamos el objeto perro de tipo Mascota con los datos ingresados por el usuario
+                                    Mascota perro = new Perro(nombre, raza, edad, dientes, aullan, vacuna, costos, origen);
                                     lista_mascotas.add(perro);
 
                                 }break;
-                            case 2:
-
-                            break;
                             //insertar gato
+                            case 2:
+                                Scanner leerG = new Scanner(System.in);
+                                System.out.print("Ingrese el número de perros que desea agregar: ");
+                                int numGatos = leerG.nextInt();
+                                for (int i = 0; i < numGatos; i++) {
+                                    System.out.println("Ingresando datos para el perro " + (i+1) + "...");
+                                    System.out.println("Ingrese el nombre del perro: ");
+                                    String nombre = leerG.nextLine();
+                                
+                                    System.out.println("Ingrese la raza del perro: ");
+                                    String raza = leerG.nextLine();
+                                
+                                    System.out.println("Ingrese la edad del perro: ");
+                                    byte edad = leerG.nextByte();
+                                
+                                    System.out.println("Ingrese la longitud del pelaje del perro: ");
+                                    String dientes = leerG.next();
+                                
+                                    System.out.println("Ingrese la textura del pelaje del perro: ");
+                                    String aullan = leerG.nextLine();
+                                
+                                    vacunas vacuna = null;
+                                    boolean vacunaValida = false;
+                                    do {
+                                        System.out.println("Seleccione la vacuna del gato:");
+                                        System.out.println("1 - Malota");
+                                        System.out.println("2 - Parbovirosis");
+                                        System.out.println("3 - Pentavalente");
+                                        System.out.println("4 - Rabia");
+                                        Scanner scanner = new Scanner(System.in);
+                                        int opcion = scanner.nextInt();
+
+                                        switch (opcion) {
+                                            case 1:
+                                                vacuna = vacunas.MALOTA;
+                                                vacunaValida = true;
+                                                break;
+                                            case 2:
+                                                vacuna = vacunas.PARBOVIROSIS;
+                                                vacunaValida = true;
+                                                break;
+                                            case 3:
+                                                vacuna = vacunas.PENTAVALENTE;
+                                                vacunaValida = true;
+                                                break;
+                                            case 4:
+                                                vacuna = vacunas.RABIA;
+                                                vacunaValida = true;
+                                                break;
+                                            default:
+                                                System.out.println("Opción inválida. Intente nuevamente.");
+                                                break;
+                                        }
+                                    } while (!vacunaValida);
+
+                                    System.out.println("ingrese el costo de la mascota: ");
+                                    double costos = leerG.nextDouble();
+
+                                    System.out.println("ingrese el pais de origen: ");
+                                    String origen = leerG.nextLine();
+                                
+                                    // Creamos el objeto gato de tipo Mascota con los datos ingresados por el usuario
+                                    Mascota gato = new Gato(nombre, raza, edad, dientes, aullan, vacuna, costos, origen);
+                                    lista_mascotas.add(gato);
+                            }break;
                         }
                     }while(control != 3);
                     break;
