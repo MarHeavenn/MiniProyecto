@@ -53,7 +53,7 @@ public class App {
                                 for (int i = 0; i < numPerros; i++) {
                                     System.out.println("Ingresando datos para el perro " + (i+1) + "...");
                                     System.out.println("Ingrese el nombre del perro: ");
-                                    String nombre = leer.nextLine();
+                                    String nombre = leer.next();
                                 
                                     System.out.println("Ingrese la raza del perro: ");
                                     String raza = leer.nextLine();
