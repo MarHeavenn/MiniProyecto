@@ -91,13 +91,13 @@ public class App {
                                     } while (!vacunaValida);
 
                                     System.out.println("ingrese el costo de la mascota: ");
-                                    int costos = leer.nextInt();
+                                    double costos = leer.nextDouble();
 
                                     System.out.println("ingrese el pais de origen: ");
                                     String origen = leer.nextLine();
                                 
                                     // Creamos el objeto perro de tipo Mascota con los datos ingresados por el usuario
-                                    Perro perro = new Perro(nombre, raza, edad, dientes, aullan, vacuna, costos, origen);
+                                    Mascota perro = new Perro(nombre, raza, edad, dientes, aullan, vacuna, costos, origen);
                                     lista_mascotas.add(perro);
 
                                 }break;
@@ -158,7 +158,7 @@ public class App {
                                     } while (!vacunaValida);
 
                                     System.out.println("ingrese el costo de la mascota: ");
-                                    int costos = leerG.nextInt();
+                                    double costos = leerG.nextDouble();
 
                                     System.out.println("ingrese el pais de origen: ");
                                     String origen = leerG.nextLine();
