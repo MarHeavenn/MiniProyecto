@@ -304,6 +304,7 @@ public class App {
                     System.out.println("No hay mascotas con la vacuna MALOTA.");
                 }
                 break;
+            //ordenar todas las mascotas de mayor a menor
             case 2:
                 Collections.sort(lista_mascotas, new Comparator<Mascota>() {
                 @Override
